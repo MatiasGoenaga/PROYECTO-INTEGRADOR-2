@@ -8,9 +8,9 @@ detalle.forEach((libro) => {
     <div class="row g-0">
       <div class="col-md-6">
         <div class="card-body">
-          <h1 class="card-title">${libro.titulo}</h1>
-          <h2 class="card-title">${libro.autor}</h2>
-          <h5 class="card-title">Editorial: ${libro.editorial}</h5>
+          <h1 class="card-title principal">${libro.titulo}</h1>
+          <h2 class="card-title secundario">${libro.autor}</h2>
+          <h5 class="card-title"><span>Editorial:</span> ${libro.editorial}</h5>
           <p class="card-text card_1">
             ${libro.descripcion}
           </p>
@@ -21,7 +21,7 @@ detalle.forEach((libro) => {
       <div class="col-md-6">
         <img
           src="${libro.imagen}"
-          class="img-fluid rounded float-end imagen"
+          class="img-fluid rounded mx-auto d-block imagen"
           alt="imagen libro"
         />
     </div>
@@ -32,7 +32,7 @@ detalle.forEach((libro) => {
 
 document.addEventListener("click", function (event) {
   if (event.target.tagName == "A") {
-    localStorage.removeItem("libro_elegido");
-    console.log("ya esta vacío el libro elegido");
+    localStorage.clear();
+    console.log("ya esta vacío el local");
   }
 });
