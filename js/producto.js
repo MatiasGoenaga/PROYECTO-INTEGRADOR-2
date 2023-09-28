@@ -20,7 +20,7 @@ detalle.forEach((libro) => {
       </div>
       <div class="col-md-6">
         <img
-          src="${libro.imagen}"
+          src="images/${libro.imagen}"
           class="img-fluid rounded mx-auto d-block imagen"
           alt="imagen libro"
         />
