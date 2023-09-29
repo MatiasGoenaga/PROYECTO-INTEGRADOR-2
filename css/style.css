@@ -121,6 +121,9 @@ ul {
   width: 45px;
   color: rgb(73, 69, 69);
 }
+.bx:hover {
+  text-shadow: 1px 1px 18px red;
+}
 .lista_de_libros {
   font-family: "Libre Baskerville", serif;
   margin-bottom: 10px;
@@ -190,7 +193,7 @@ footer {
   justify-content: space-between;
   margin: 0;
   font-family: "Oswald", sans-serif;
-  font-size: 1em;
+
   text-align: center;
 }
 .ubicacion p {
@@ -198,6 +201,7 @@ footer {
   padding: 2px;
 }
 .envios {
+  font-size: 1em;
   border-radius: 12px 12px 12px 12px;
   background-color: #eff5f5;
 }
@@ -209,9 +213,6 @@ footer {
 }
 .mb-3 {
   margin-bottom: 0 !important;
-}
-.red {
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -287,6 +288,7 @@ footer {
   }
   .flex {
     gap: 10px;
+    justify-content: stretch;
   }
 
   .local {
@@ -299,13 +301,27 @@ footer {
   .redes {
     display: none;
   }
+  .calle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 2;
+    font-size: 1.2em;
+    text-align: center;
+  }
   .ubicacion {
-    font-size: 1.5em;
+    flex-grow: 6;
+  }
+  .ubicacion p {
+    margin: 0;
+    padding: 0px;
   }
   .envios {
-    height: 65px;
     border-radius: 12px 12px 12px 12px;
     background-color: #eff5f5;
+  }
+  .envios p {
+    font-size: 1em;
   }
   .dos {
     margin: 0;
@@ -358,13 +374,15 @@ footer {
   .ubicacion {
     font-size: 2em;
   }
+  .calle {
+    font-size: 1em;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   body {
-    margin: auto;
     width: 1440px;
-    background-color: #eff5f5;
+    margin: auto;
     border: #000000 solid;
     border-width: 1px;
   }
@@ -424,7 +442,10 @@ footer {
     font-size: 3em;
     justify-content: center;
   }
-  .red a {
-    width: 70px;
+
+  .envios {
+    line-height: 105px;
+    border-radius: 12px 12px 12px 12px;
+    background-color: #eff5f5;
   }
 }

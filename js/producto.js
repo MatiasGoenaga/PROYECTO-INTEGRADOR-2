@@ -3,6 +3,12 @@ const volver = document.querySelector(".bxs-left-arrow");
 const detalle_libro = document.getElementById("detalle");
 
 detalle.forEach((libro) => {
+  const calificacion = ["🌠", "🌠", "🌠", "🌠", "🌠"];
+
+  for (let i = 0; i < libro.calificacion.length; i++) {
+    calificacion[i] = "🌟";
+  }
+
   let estructura_card = `
   <div class="card mb-3">
     <div class="row g-0">
@@ -14,7 +20,7 @@ detalle.forEach((libro) => {
           <p class="card-text card_1">
             ${libro.descripcion}
           </p>
-          <h3 class="card-title estrella">${libro.calificacion}</h3>
+          <h3 class="card-title estrella">${calificacion.join("")}</h3>
           <h3 class="card-title">$${libro.precio}</h3>          
         </div>
       </div>
@@ -33,6 +39,5 @@ detalle.forEach((libro) => {
 document.addEventListener("click", function (event) {
   if (event.target.tagName == "A") {
     localStorage.clear();
-    console.log("ya esta vacío el local");
   }
 });

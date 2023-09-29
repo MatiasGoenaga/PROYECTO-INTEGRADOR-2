@@ -17,13 +17,15 @@ titulo2.classList.add("titulo_1");
 let libro;
 
 const estructura1 = async () => {
-  // libro = localStorage.getItem("lista_libros");
+  localStorage.clear();
+  libro = localStorage.getItem("lista_libros");
 
-  // if (libro == null) {
-  const response = await fetch("./js/libros.json");
-  libro = await response.json();
+  if (libro == null) {
+    const response = await fetch("./js/libros.json");
+    libro = await response.json();
 
-  localStorage.setItem("lista_libros", JSON.stringify(libro));
+    localStorage.setItem("lista_libros", JSON.stringify(libro));
+  }
 
   const jsonlibros = JSON.parse(localStorage.getItem("lista_libros"));
   const lista_de_libros = document.querySelector("#seccion_2");
